@@ -40,6 +40,12 @@
 		E182678729CF6C5D009CB6C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182678629CF6C5D009CB6C9 /* MainViewController.swift */; };
 		E182678B29CF6DB2009CB6C9 /* InputTextFieldContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = E182678A29CF6DB2009CB6C9 /* InputTextFieldContainer.xib */; };
 		E182678D29CF6E11009CB6C9 /* InputTextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182678C29CF6E11009CB6C9 /* InputTextFieldContainer.swift */; };
+		E19973C529D20C1200C39BC5 /* LoginAuthenticationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19973C329D20C1200C39BC5 /* LoginAuthenticationCell.swift */; };
+		E19973C629D20C1200C39BC5 /* LoginAuthenticationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19973C429D20C1200C39BC5 /* LoginAuthenticationCell.xib */; };
+		E19973C829D2108400C39BC5 /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19973C729D2108400C39BC5 /* SectionProtocol.swift */; };
+		E19973CA29D216F500C39BC5 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19973C929D216F500C39BC5 /* UITableView+Extension.swift */; };
+		E1AB94AC29D1F056007B570C /* InputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB94AB29D1F056007B570C /* InputType.swift */; };
+		E1AB94B029D1FCF8007B570C /* LoginView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB94AF29D1FCF8007B570C /* LoginView+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +86,12 @@
 		E182678629CF6C5D009CB6C9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E182678A29CF6DB2009CB6C9 /* InputTextFieldContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextFieldContainer.xib; sourceTree = "<group>"; };
 		E182678C29CF6E11009CB6C9 /* InputTextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldContainer.swift; sourceTree = "<group>"; };
+		E19973C329D20C1200C39BC5 /* LoginAuthenticationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticationCell.swift; sourceTree = "<group>"; };
+		E19973C429D20C1200C39BC5 /* LoginAuthenticationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAuthenticationCell.xib; sourceTree = "<group>"; };
+		E19973C729D2108400C39BC5 /* SectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
+		E19973C929D216F500C39BC5 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		E1AB94AB29D1F056007B570C /* InputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputType.swift; sourceTree = "<group>"; };
+		E1AB94AF29D1FCF8007B570C /* LoginView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +175,7 @@
 		E150287C29CF1BF600401CFB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E1AB94AA29D1F04B007B570C /* Enum */,
 				E182675F29CF5AF6009CB6C9 /* Common */,
 				E150289F29CF1D4100401CFB /* Class */,
 				E150288429CF1C4500401CFB /* Foundation */,
@@ -210,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				E150288E29CF1CE200401CFB /* LoginViewController.swift */,
+				E1AB94AF29D1FCF8007B570C /* LoginView+TableView.swift */,
 				E150288F29CF1CE200401CFB /* LoginViewController.xib */,
 				E150289229CF1CEC00401CFB /* SignUpViewController.swift */,
 				E150289329CF1CEC00401CFB /* SignUpViewController.xib */,
@@ -220,6 +234,8 @@
 		E150288129CF1C2700401CFB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E19973C329D20C1200C39BC5 /* LoginAuthenticationCell.swift */,
+				E19973C429D20C1200C39BC5 /* LoginAuthenticationCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -238,6 +254,7 @@
 				E182675129CF330F009CB6C9 /* UIViewController+Extension.swift */,
 				E182675329CF3332009CB6C9 /* UIView+Extension.swift */,
 				E182675729CF337B009CB6C9 /* UICollectionView+Extension.swift */,
+				E19973C929D216F500C39BC5 /* UITableView+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -253,6 +270,7 @@
 		E150288529CF1C5E00401CFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E1AB94AB29D1F056007B570C /* InputType.swift */,
 				E150288A29CF1CC800401CFB /* AuthModel.swift */,
 			);
 			path = Model;
@@ -285,6 +303,7 @@
 		E150289F29CF1D4100401CFB /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E19973C729D2108400C39BC5 /* SectionProtocol.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -393,6 +412,13 @@
 			path = InputTextFieldContainer;
 			sourceTree = "<group>";
 		};
+		E1AB94AA29D1F04B007B570C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,6 +482,7 @@
 				E150289529CF1CEC00401CFB /* SignUpViewController.xib in Resources */,
 				E182677629CF6A01009CB6C9 /* SongsFeedViewController.xib in Resources */,
 				E150289129CF1CE200401CFB /* LoginViewController.xib in Resources */,
+				E19973C629D20C1200C39BC5 /* LoginAuthenticationCell.xib in Resources */,
 				E182678B29CF6DB2009CB6C9 /* InputTextFieldContainer.xib in Resources */,
 				E150287329CF17B200401CFB /* LaunchScreen.storyboard in Resources */,
 				E150287029CF17B200401CFB /* Assets.xcassets in Resources */,
@@ -519,6 +546,7 @@
 				E150289E29CF1D3600401CFB /* NetworkManager.swift in Sources */,
 				E182676329CF612E009CB6C9 /* DataStore.swift in Sources */,
 				E182675229CF330F009CB6C9 /* UIViewController+Extension.swift in Sources */,
+				E19973C529D20C1200C39BC5 /* LoginAuthenticationCell.swift in Sources */,
 				E150288D29CF1CCE00401CFB /* AuthManager.swift in Sources */,
 				E182678D29CF6E11009CB6C9 /* InputTextFieldContainer.swift in Sources */,
 				E150286729CF17B100401CFB /* AppDelegate.swift in Sources */,
@@ -526,13 +554,17 @@
 				E182677F29CF6AD8009CB6C9 /* SongsLibraryViewController.swift in Sources */,
 				E182675429CF3332009CB6C9 /* UIView+Extension.swift in Sources */,
 				E182675629CF3350009CB6C9 /* NSObject+Extension.swift in Sources */,
+				E1AB94AC29D1F056007B570C /* InputType.swift in Sources */,
 				E182676D29CF6655009CB6C9 /* CustomTabBarController.swift in Sources */,
 				E182675829CF337B009CB6C9 /* UICollectionView+Extension.swift in Sources */,
 				E182676929CF6413009CB6C9 /* LaunchController.swift in Sources */,
+				E19973C829D2108400C39BC5 /* SectionProtocol.swift in Sources */,
 				E150289029CF1CE200401CFB /* LoginViewController.swift in Sources */,
 				E150289829CF1D0F00401CFB /* PersistanceManager.swift in Sources */,
+				E1AB94B029D1FCF8007B570C /* LoginView+TableView.swift in Sources */,
 				E150289429CF1CEC00401CFB /* SignUpViewController.swift in Sources */,
 				E150289C29CF1D2E00401CFB /* Endpoint.swift in Sources */,
+				E19973CA29D216F500C39BC5 /* UITableView+Extension.swift in Sources */,
 				E182675E29CF539D009CB6C9 /* BaseTableViewCell.swift in Sources */,
 				E182677A29CF6A70009CB6C9 /* SongsSearchViewController.swift in Sources */,
 				E182676129CF5B08009CB6C9 /* Common.swift in Sources */,

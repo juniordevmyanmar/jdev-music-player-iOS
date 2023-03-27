@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setUpRootController() {
         if Common.toLogin() {
-            let vc = LaunchController()
+            let vc = LoginViewController()
             window?.rootViewController = vc
         } else {
             let vc = MainViewController()
