@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup Window & Load Splash View
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
+        // Configure Keyboard
+        IQKeyboardManager.shared.enable = true
         
         // Configure Root Controller
         setUpRootController()
@@ -41,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setUpRootController() {
         if Common.toLogin() {
-            let vc = LoginViewController()
+            let vc = AuthRouter.createModule()
             window?.rootViewController = vc
         } else {
             let vc = MainViewController()

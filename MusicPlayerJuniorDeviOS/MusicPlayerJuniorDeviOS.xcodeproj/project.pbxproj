@@ -20,6 +20,19 @@
 		E150289829CF1D0F00401CFB /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150289729CF1D0F00401CFB /* PersistanceManager.swift */; };
 		E150289C29CF1D2E00401CFB /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150289B29CF1D2E00401CFB /* Endpoint.swift */; };
 		E150289E29CF1D3600401CFB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E150289D29CF1D3600401CFB /* NetworkManager.swift */; };
+		E16BE62729D4641100675222 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE62629D4641100675222 /* ErrorResponse.swift */; };
+		E16BE62929D4651200675222 /* FromPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE62829D4651200675222 /* FromPage.swift */; };
+		E16BE63A29D7226200675222 /* AuthSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE63929D7226200675222 /* AuthSegment.swift */; };
+		E16BE63C29D722E600675222 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE63B29D722E600675222 /* UIColor+Extension.swift */; };
+		E16BE63E29D7298B00675222 /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE63D29D7298B00675222 /* BaseCustomView.swift */; };
+		E16BE64129D72DD100675222 /* Raleway-700.otf in Resources */ = {isa = PBXBuildFile; fileRef = E16BE64029D72DD100675222 /* Raleway-700.otf */; };
+		E16BE64329D72ED800675222 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE64229D72ED800675222 /* UIFont+Extension.swift */; };
+		E16BE64629D7373800675222 /* DynamicSizeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE64529D7373800675222 /* DynamicSizeTableView.swift */; };
+		E16BE64829D73AFB00675222 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE64729D73AFB00675222 /* AuthType.swift */; };
+		E16BE64B29D7D10000675222 /* AuthenticateButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE64929D7D10000675222 /* AuthenticateButtonTableViewCell.swift */; };
+		E16BE64C29D7D10000675222 /* AuthenticateButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16BE64A29D7D10000675222 /* AuthenticateButtonTableViewCell.xib */; };
+		E16BE64E29D7D11900675222 /* ButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE64D29D7D11900675222 /* ButtonState.swift */; };
+		E16BE65029D9F16D00675222 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16BE64F29D9F16D00675222 /* Date+Extension.swift */; };
 		E182675229CF330F009CB6C9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182675129CF330F009CB6C9 /* UIViewController+Extension.swift */; };
 		E182675429CF3332009CB6C9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182675329CF3332009CB6C9 /* UIView+Extension.swift */; };
 		E182675629CF3350009CB6C9 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182675529CF3350009CB6C9 /* NSObject+Extension.swift */; };
@@ -44,6 +57,9 @@
 		E19973C629D20C1200C39BC5 /* LoginAuthenticationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19973C429D20C1200C39BC5 /* LoginAuthenticationCell.xib */; };
 		E19973C829D2108400C39BC5 /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19973C729D2108400C39BC5 /* SectionProtocol.swift */; };
 		E19973CA29D216F500C39BC5 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19973C929D216F500C39BC5 /* UITableView+Extension.swift */; };
+		E1AB670D29DC6CBB004BF7CF /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB670C29DC6CBB004BF7CF /* AuthInteractor.swift */; };
+		E1AB670F29DC6CC0004BF7CF /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB670E29DC6CC0004BF7CF /* AuthPresenter.swift */; };
+		E1AB671129DC6CD8004BF7CF /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB671029DC6CD8004BF7CF /* AuthRouter.swift */; };
 		E1AB94AC29D1F056007B570C /* InputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB94AB29D1F056007B570C /* InputType.swift */; };
 		E1AB94B029D1FCF8007B570C /* LoginView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB94AF29D1FCF8007B570C /* LoginView+TableView.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +82,19 @@
 		E150289729CF1D0F00401CFB /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		E150289B29CF1D2E00401CFB /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E150289D29CF1D3600401CFB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E16BE62629D4641100675222 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		E16BE62829D4651200675222 /* FromPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FromPage.swift; path = MusicPlayerJuniorDeviOS/Utilities/Class/FromPage.swift; sourceTree = SOURCE_ROOT; };
+		E16BE63929D7226200675222 /* AuthSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSegment.swift; sourceTree = "<group>"; };
+		E16BE63B29D722E600675222 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E16BE63D29D7298B00675222 /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
+		E16BE64029D72DD100675222 /* Raleway-700.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-700.otf"; sourceTree = "<group>"; };
+		E16BE64229D72ED800675222 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		E16BE64529D7373800675222 /* DynamicSizeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSizeTableView.swift; sourceTree = "<group>"; };
+		E16BE64729D73AFB00675222 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthType.swift; path = MusicPlayerJuniorDeviOS/Components/DynamicSizeTableView/AuthType.swift; sourceTree = SOURCE_ROOT; };
+		E16BE64929D7D10000675222 /* AuthenticateButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateButtonTableViewCell.swift; sourceTree = "<group>"; };
+		E16BE64A29D7D10000675222 /* AuthenticateButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticateButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E16BE64D29D7D11900675222 /* ButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonState.swift; sourceTree = "<group>"; };
+		E16BE64F29D9F16D00675222 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		E182675129CF330F009CB6C9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E182675329CF3332009CB6C9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E182675529CF3350009CB6C9 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -90,6 +119,9 @@
 		E19973C429D20C1200C39BC5 /* LoginAuthenticationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAuthenticationCell.xib; sourceTree = "<group>"; };
 		E19973C729D2108400C39BC5 /* SectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		E19973C929D216F500C39BC5 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		E1AB670C29DC6CBB004BF7CF /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		E1AB670E29DC6CC0004BF7CF /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		E1AB671029DC6CD8004BF7CF /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		E1AB94AB29D1F056007B570C /* InputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputType.swift; sourceTree = "<group>"; };
 		E1AB94AF29D1FCF8007B570C /* LoginView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +236,7 @@
 				E182675D29CF539D009CB6C9 /* BaseTableViewCell.swift */,
 				E182678629CF6C5D009CB6C9 /* MainViewController.swift */,
 				E182676C29CF6655009CB6C9 /* CustomTabBarController.swift */,
+				E16BE63D29D7298B00675222 /* BaseCustomView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -211,6 +244,9 @@
 		E150287F29CF1C1500401CFB /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E1AB670B29DC6C71004BF7CF /* Interactor */,
+				E1AB670A29DC6C6B004BF7CF /* Presenter */,
+				E1AB670929DC6C67004BF7CF /* Router */,
 				E150288529CF1C5E00401CFB /* Model */,
 				E150288229CF1C2B00401CFB /* Manager */,
 				E150288129CF1C2700401CFB /* Cell */,
@@ -236,6 +272,8 @@
 			children = (
 				E19973C329D20C1200C39BC5 /* LoginAuthenticationCell.swift */,
 				E19973C429D20C1200C39BC5 /* LoginAuthenticationCell.xib */,
+				E16BE64929D7D10000675222 /* AuthenticateButtonTableViewCell.swift */,
+				E16BE64A29D7D10000675222 /* AuthenticateButtonTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -255,6 +293,8 @@
 				E182675329CF3332009CB6C9 /* UIView+Extension.swift */,
 				E182675729CF337B009CB6C9 /* UICollectionView+Extension.swift */,
 				E19973C929D216F500C39BC5 /* UITableView+Extension.swift */,
+				E16BE63B29D722E600675222 /* UIColor+Extension.swift */,
+				E16BE64229D72ED800675222 /* UIFont+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -263,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				E182675529CF3350009CB6C9 /* NSObject+Extension.swift */,
+				E16BE64F29D9F16D00675222 /* Date+Extension.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -272,6 +313,7 @@
 			children = (
 				E1AB94AB29D1F056007B570C /* InputType.swift */,
 				E150288A29CF1CC800401CFB /* AuthModel.swift */,
+				E16BE64D29D7D11900675222 /* ButtonState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,13 +346,39 @@
 			isa = PBXGroup;
 			children = (
 				E19973C729D2108400C39BC5 /* SectionProtocol.swift */,
+				E16BE62629D4641100675222 /* ErrorResponse.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		E16BE63829D721EA00675222 /* CustomSegment */ = {
+			isa = PBXGroup;
+			children = (
+				E16BE63929D7226200675222 /* AuthSegment.swift */,
+			);
+			path = CustomSegment;
+			sourceTree = "<group>";
+		};
+		E16BE63F29D72DC000675222 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E16BE64029D72DD100675222 /* Raleway-700.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		E16BE64429D7371E00675222 /* DynamicSizeTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E16BE64529D7373800675222 /* DynamicSizeTableView.swift */,
+			);
+			path = DynamicSizeTableView;
 			sourceTree = "<group>";
 		};
 		E182675929CF33B4009CB6C9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E16BE63F29D72DC000675222 /* Font */,
 				E150286F29CF17B200401CFB /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -398,6 +466,8 @@
 		E182678829CF6CAD009CB6C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E16BE64429D7371E00675222 /* DynamicSizeTableView */,
+				E16BE63829D721EA00675222 /* CustomSegment */,
 				E182678929CF6CD3009CB6C9 /* InputTextFieldContainer */,
 			);
 			path = Components;
@@ -412,9 +482,35 @@
 			path = InputTextFieldContainer;
 			sourceTree = "<group>";
 		};
+		E1AB670929DC6C67004BF7CF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E1AB671029DC6CD8004BF7CF /* AuthRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E1AB670A29DC6C6B004BF7CF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E1AB670E29DC6CC0004BF7CF /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1AB670B29DC6C71004BF7CF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E1AB670C29DC6CBB004BF7CF /* AuthInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		E1AB94AA29D1F04B007B570C /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				E16BE62829D4651200675222 /* FromPage.swift */,
+				E16BE64729D73AFB00675222 /* AuthType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -485,8 +581,10 @@
 				E19973C629D20C1200C39BC5 /* LoginAuthenticationCell.xib in Resources */,
 				E182678B29CF6DB2009CB6C9 /* InputTextFieldContainer.xib in Resources */,
 				E150287329CF17B200401CFB /* LaunchScreen.storyboard in Resources */,
+				E16BE64C29D7D10000675222 /* AuthenticateButtonTableViewCell.xib in Resources */,
 				E150287029CF17B200401CFB /* Assets.xcassets in Resources */,
 				E182678029CF6AD8009CB6C9 /* SongsLibraryViewController.xib in Resources */,
+				E16BE64129D72DD100675222 /* Raleway-700.otf in Resources */,
 				E182677B29CF6A70009CB6C9 /* SongsSearchViewController.xib in Resources */,
 				E182676A29CF6413009CB6C9 /* LaunchController.xib in Resources */,
 			);
@@ -541,8 +639,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16BE64B29D7D10000675222 /* AuthenticateButtonTableViewCell.swift in Sources */,
+				E16BE64E29D7D11900675222 /* ButtonState.swift in Sources */,
+				E16BE65029D9F16D00675222 /* Date+Extension.swift in Sources */,
 				E182677529CF6A01009CB6C9 /* SongsFeedViewController.swift in Sources */,
 				E182678729CF6C5D009CB6C9 /* MainViewController.swift in Sources */,
+				E16BE63E29D7298B00675222 /* BaseCustomView.swift in Sources */,
 				E150289E29CF1D3600401CFB /* NetworkManager.swift in Sources */,
 				E182676329CF612E009CB6C9 /* DataStore.swift in Sources */,
 				E182675229CF330F009CB6C9 /* UIViewController+Extension.swift in Sources */,
@@ -550,6 +652,7 @@
 				E150288D29CF1CCE00401CFB /* AuthManager.swift in Sources */,
 				E182678D29CF6E11009CB6C9 /* InputTextFieldContainer.swift in Sources */,
 				E150286729CF17B100401CFB /* AppDelegate.swift in Sources */,
+				E16BE64329D72ED800675222 /* UIFont+Extension.swift in Sources */,
 				E182675B29CF4EE7009CB6C9 /* BaseViewController.swift in Sources */,
 				E182677F29CF6AD8009CB6C9 /* SongsLibraryViewController.swift in Sources */,
 				E182675429CF3332009CB6C9 /* UIView+Extension.swift in Sources */,
@@ -557,16 +660,25 @@
 				E1AB94AC29D1F056007B570C /* InputType.swift in Sources */,
 				E182676D29CF6655009CB6C9 /* CustomTabBarController.swift in Sources */,
 				E182675829CF337B009CB6C9 /* UICollectionView+Extension.swift in Sources */,
+				E16BE62729D4641100675222 /* ErrorResponse.swift in Sources */,
+				E16BE63A29D7226200675222 /* AuthSegment.swift in Sources */,
 				E182676929CF6413009CB6C9 /* LaunchController.swift in Sources */,
 				E19973C829D2108400C39BC5 /* SectionProtocol.swift in Sources */,
 				E150289029CF1CE200401CFB /* LoginViewController.swift in Sources */,
 				E150289829CF1D0F00401CFB /* PersistanceManager.swift in Sources */,
 				E1AB94B029D1FCF8007B570C /* LoginView+TableView.swift in Sources */,
+				E1AB671129DC6CD8004BF7CF /* AuthRouter.swift in Sources */,
+				E16BE63C29D722E600675222 /* UIColor+Extension.swift in Sources */,
+				E16BE62929D4651200675222 /* FromPage.swift in Sources */,
 				E150289429CF1CEC00401CFB /* SignUpViewController.swift in Sources */,
 				E150289C29CF1D2E00401CFB /* Endpoint.swift in Sources */,
 				E19973CA29D216F500C39BC5 /* UITableView+Extension.swift in Sources */,
 				E182675E29CF539D009CB6C9 /* BaseTableViewCell.swift in Sources */,
+				E1AB670F29DC6CC0004BF7CF /* AuthPresenter.swift in Sources */,
 				E182677A29CF6A70009CB6C9 /* SongsSearchViewController.swift in Sources */,
+				E16BE64629D7373800675222 /* DynamicSizeTableView.swift in Sources */,
+				E1AB670D29DC6CBB004BF7CF /* AuthInteractor.swift in Sources */,
+				E16BE64829D73AFB00675222 /* AuthType.swift in Sources */,
 				E182676129CF5B08009CB6C9 /* Common.swift in Sources */,
 				E150288B29CF1CC800401CFB /* AuthModel.swift in Sources */,
 			);
@@ -708,7 +820,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JHPZ4264U2;
+				DEVELOPMENT_TEAM = 68X5SYLHZW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusicPlayerJuniorDeviOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -737,7 +849,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JHPZ4264U2;
+				DEVELOPMENT_TEAM = 68X5SYLHZW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusicPlayerJuniorDeviOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

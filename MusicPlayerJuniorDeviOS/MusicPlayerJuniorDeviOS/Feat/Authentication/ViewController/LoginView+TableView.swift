@@ -9,38 +9,57 @@ import Foundation
 import UIKit
 
 extension LoginViewController: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.sections.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sections[section].items.count
+        switch authType {
+        case .login:
+            return section == 0 ? loginItems.count : 1
+        case .signUp:
+            return section == 0 ? signUpItems.count : 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: LoginAuthenticationCell.className, for: indexPath) as? LoginAuthenticationCell else {
-            return UITableViewCell()
-        }
         
-        cell.item = self.sections[indexPath.section].items[indexPath.row].toType(InputType.self)
-        
-        cell.handleDoneAction { inputText, inputType in
-            switch inputType {
-            case .email:
-                debugPrint("Carry out email validation")
-            case .fullName:
-                debugPrint("Carry out email validation")
-            case .password:
-                debugPrint("Carry out email validation")
-            case .confirmPassword:
-                debugPrint("Carry out email validation")
-            case .phoneNumber:
-                debugPrint("Carry out email validation")
-            case .none:
-                debugPrint("Carry out email validation")
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LoginAuthenticationCell.className, for: indexPath) as? LoginAuthenticationCell else {
+                return UITableViewCell()
             }
+            
+            switch authType {
+            case .login:
+                cell.item = self.loginItems[indexPath.row]
+                cell.row = indexPath.row
+                cell.handleDoneAction { text, inputType, row in
+                    self.didTextChangeForLoginScreen(text: text, inputType: inputType, row: row)
+                }
+            case .signUp:
+                cell.item = self.signUpItems[indexPath.row]
+                cell.row = indexPath.row
+                cell.handleDateSelction { self.didSelectDateForSignUpScreen(text: $0) }
+                cell.handleDoneAction { text, inputType, row in
+                    self.didTextChangeForSignUpScreen(text: text, inputType: inputType, row: row)
+                }
+            }
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AuthenticateButtonTableViewCell.className, for: indexPath) as? AuthenticateButtonTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.item = self.buttonModel
+            cell.handleConfirmAuthentication {
+                switch $0 {
+                case .login:
+                    self.didConfirmLogin()
+                case .signUp:
+                    self.didConfirmSignUp()
+                }
+            }
+            return cell
         }
-        
-        return cell
     }
 }

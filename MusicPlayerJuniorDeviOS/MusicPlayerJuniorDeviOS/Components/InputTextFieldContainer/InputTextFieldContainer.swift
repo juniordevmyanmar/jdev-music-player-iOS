@@ -10,14 +10,15 @@ import UIKit
 
 class InputTextFieldContainer: UIView {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var inputTextBackgroundView: UIView!
     @IBOutlet weak var inputTextField: UITextField!
     let toolBar = UIToolbar()
     var inputType: InputType?
     var doneAction: ((String, InputType) -> Void)?
     var textChanged: ((String, InputType) -> Void)?
+    var didChooseDate: ((String) -> Void)?
     var inputText: String = ""
+    var datePicker: UIDatePicker?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -33,51 +34,82 @@ class InputTextFieldContainer: UIView {
     }
     
     private func setUpUI() {
-        backgroundView.layer.borderColor = UIColor.black.cgColor
-        backgroundView.layer.borderWidth = 1.0
-        backgroundView.layer.cornerRadius = 15
-        
-        inputTextField.borderStyle = .none
+        inputTextBackgroundView.backgroundColor = .textColor
+        inputTextBackgroundView.layer.cornerRadius = 4
+        inputTextBackgroundView.layer.masksToBounds = true
         inputTextField.delegate = self
-        inputTextField.keyboardType = .default
-        
+        inputTextField.borderStyle = .none
+        inputTextField.textColor = .controlButton
+        inputTextField.font = .raleWay700(ofSize: 16)
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTapped))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         toolBar.sizeToFit()
         
         doneButton.tintColor = .black
-        toolBar.items = [doneButton, flexibleSpace]
+        toolBar.items = [flexibleSpace, doneButton]
         toolBar.barTintColor = .white
-        toolBar.layer.cornerRadius = 30
         toolBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         toolBar.layer.masksToBounds = true
+        toolBar.layer.cornerRadius = 30
         inputTextField.inputAccessoryView = toolBar
     }
     
-    public func setUpTextField(type: InputType) {
+    public func setUpTextFieldType(type: InputType) {
+        self.inputType = type
+        inputTextField.placeholder = type.titleLabel.lowercased()
         
         switch type {
-        case .email, .fullName:
-            inputTextField.autocorrectionType = .no
-        case .password, .confirmPassword:
-            inputTextField.isSecureTextEntry = true
-            inputTextField.autocorrectionType = .no
         case .phoneNumber:
             inputTextField.keyboardType = .phonePad
+        case .dateOfBirth:
+            self.configureDatePicker(textField: inputTextField)
         default:
             break
         }
-        
-        self.inputType = type
-        inputTextField.placeholder = type.titleLabel.lowercased()
-        titleLabel.text = type.titleLabel
     }
     
     @objc func doneButtonTapped() {
         inputTextField.resignFirstResponder()
         guard let type = self.inputType else { return }
-        doneAction?(self.inputText, type)
+        doneAction?(self.inputTextField.text ?? "", type)
+    }
+    
+    private func configureDatePicker(textField: UITextField) {
+        let dropDown = UIImageView(image: UIImage(named: "date"))
+        let stackView = UIStackView(arrangedSubviews: [dropDown])
+        stackView.isUserInteractionEnabled = false
+        dropDown.contentMode = .center
+        dropDown.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        dropDown.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        var rightView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: textField.frame.height))
+        rightView = stackView
+        
+        textField.rightView = rightView
+        textField.rightViewMode = .always
+        
+        createDatePicker(textField: textField)
+    }
+    
+    func createDatePicker(textField: UITextField) {
+        datePicker = UIDatePicker()
+        datePicker?.date = Date()
+        datePicker?.maximumDate = Date()
+        datePicker?.locale = Locale.init(identifier: "en_US")
+        datePicker?.datePickerMode = .date
+        textField.inputView = datePicker
+        if #available(iOS 13.4, *) {
+            datePicker?.preferredDatePickerStyle = .wheels
+        }
+        datePicker?.backgroundColor = .white
+        datePicker?.addTarget(self, action: #selector(handleDateSelection), for: .valueChanged)
+    }
+    
+    @objc func handleDateSelection() {
+        guard let picker = datePicker else { return }
+        inputTextField.text = picker.date.toString
+        self.didChooseDate?(picker.date.toString)
     }
     
     func handleDoneAction(completion: @escaping(String, InputType) -> Void) {
@@ -86,6 +118,10 @@ class InputTextFieldContainer: UIView {
     
     func handleTextChanged(completion: @escaping(String, InputType) -> Void) {
         self.textChanged = completion
+    }
+    
+    func handleDatePickAction(completion: @escaping(String) -> Void) {
+        self.didChooseDate = completion
     }
     
 }

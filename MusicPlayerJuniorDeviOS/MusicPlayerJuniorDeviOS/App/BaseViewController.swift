@@ -10,7 +10,8 @@ import NVActivityIndicatorView
 
 class BaseViewController: UIViewController {
     
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backButton: UIButton?
+    @IBOutlet weak var navigationTitleLabel: UILabel?
     
     let activityIndicatorView = NVActivityIndicatorView(
         frame: CGRect(x: 0, y: 0, width: 30, height: 30),
