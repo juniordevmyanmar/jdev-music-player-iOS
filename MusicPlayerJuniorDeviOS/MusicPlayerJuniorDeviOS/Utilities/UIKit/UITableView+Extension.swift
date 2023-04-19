@@ -14,4 +14,14 @@ extension UITableView {
             self.register(UINib(nibName: $0, bundle: nil), forCellReuseIdentifier: $0)
         }
     }
+    /// Reloads a table view without losing track of what was selected.
+    func reloadDataSavingSelections() {
+        let selectedRows = indexPathsForSelectedRows
+        reloadData()
+        if let selectedRow = selectedRows {
+            for indexPath in selectedRow {
+                selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            }
+        }
+    }
 }

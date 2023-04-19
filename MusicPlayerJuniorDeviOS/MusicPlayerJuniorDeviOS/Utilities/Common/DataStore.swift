@@ -14,10 +14,9 @@ struct DataStore {
     }
     
     static var shared = DataStore()
-    
+    let userDefaults = UserDefaults.standard
     private init() {}
     
-    let userDefaults = UserDefaults.standard
     
     var token: String {
         get {

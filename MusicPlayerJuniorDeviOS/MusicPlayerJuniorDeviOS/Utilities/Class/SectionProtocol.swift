@@ -17,7 +17,7 @@ extension SectionItem {
     }
 }
 
-final class LoginSections {
+final class AuthSections {
     var items: [SectionItem]
     
     init(items: [SectionItem]) {

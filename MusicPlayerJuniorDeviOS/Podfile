@@ -4,9 +4,17 @@
 target 'MusicPlayerJuniorDeviOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+
+# Network
 pod 'Alamofire'
+pod 'SwiftyJSON', '~> 4.0'
+
+# UI
 pod 'NVActivityIndicatorView'
- pod 'SwiftyJSON', '~> 4.0'
+
+#KeyBoard
+pod 'IQKeyboardManagerSwift'
+ 
   # Pods for MusicPlayerJuniorDeviOS
 
 end

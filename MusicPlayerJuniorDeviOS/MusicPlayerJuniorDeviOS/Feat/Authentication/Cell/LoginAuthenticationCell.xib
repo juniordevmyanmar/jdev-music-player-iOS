@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,22 +17,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="397" height="143"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g2g-fr-ajP">
-                        <rect key="frame" x="20" y="0.0" width="357" height="143"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-kj-3F7" customClass="InputTextFieldContainer" customModule="MusicPlayerJuniorDeviOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="357" height="143"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
-                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-kj-3F7" customClass="InputTextFieldContainer" customModule="MusicPlayerJuniorDeviOS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="10" width="397" height="123"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="g2g-fr-ajP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9UV-jW-gWe"/>
-                    <constraint firstItem="g2g-fr-ajP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="F0T-j2-2lP"/>
-                    <constraint firstAttribute="trailing" secondItem="g2g-fr-ajP" secondAttribute="trailing" constant="20" id="Szf-Kc-huS"/>
-                    <constraint firstAttribute="bottom" secondItem="g2g-fr-ajP" secondAttribute="bottom" id="vE2-t7-WQY"/>
+                    <constraint firstItem="ZJ3-kj-3F7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ms5-pt-cMK"/>
+                    <constraint firstAttribute="trailing" secondItem="ZJ3-kj-3F7" secondAttribute="trailing" id="Y05-0U-1XX"/>
+                    <constraint firstItem="ZJ3-kj-3F7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YAb-bg-NfY"/>
+                    <constraint firstAttribute="bottom" secondItem="ZJ3-kj-3F7" secondAttribute="bottom" constant="10" id="v8J-no-b4j"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -44,9 +38,4 @@
             <point key="canvasLocation" x="196.15384615384616" y="55.805687203791464"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
